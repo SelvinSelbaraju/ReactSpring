@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
-body {
-  
+.bounce-particle {
+  position: relative;
+  background-color: red;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-params {
+  display: flex;
+  flex-direction: column;
 }
