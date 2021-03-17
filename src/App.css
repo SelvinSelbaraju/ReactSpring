@@ -4,7 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .bounce-particle {
+  margin-top: 100px;
   position: relative;
   background-color: red;
   border-radius: 50%;
@@ -18,4 +23,8 @@
 .config-params {
   display: flex;
   flex-direction: column;
+}
+
+.container {
+  margin-top: 50px;
 }
