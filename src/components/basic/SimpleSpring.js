@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useSpring, animated} from 'react-spring';
+import './SimpleSpring.css';
 
 function SimpleSpring() {
     const defaultValues = {mass: 1, tension: 170, friction: 26}

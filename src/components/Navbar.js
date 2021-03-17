@@ -1,5 +1,6 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { navbarItems } from './NavbarItems';
 
 function Navbar() {
     return (
@@ -11,7 +12,7 @@ function Navbar() {
 
             <div className="collapse navbar-collapse" id="navbarContent">
                 <ul className="navbar-nav">
-                    <NavLink exact to="/" className="nav-link nav-item">
+                    {/* <NavLink exact to="/" className="nav-link nav-item">
                         Home
                     </NavLink>
                     <NavLink to="/basic" className="nav-link nav-item">
@@ -26,7 +27,32 @@ function Navbar() {
                     </li>
                     <NavLink to="/advanced" className="nav-link nav-item">
                         Advanced
-                    </NavLink>
+                    </NavLink> */}
+                    <NavLink exact className="nav-item nav-link" to="/">Home</NavLink>
+                    {
+                        navbarItems.map(item => {
+                            const { name, path, branch } = item;
+                            return (
+                                <>
+                                <NavLink className="nav-item nav-link" to={path}>{name}</NavLink>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {
+                                    branch.map(subitem => {
+                                        const { name, path } = subitem;
+                                        return (
+                                        <NavLink className="dropdown-item" to={path}>{name}</NavLink>
+                                        )    
+                                    }) 
+                                }
+                                </div>
+                                </li>
+                                </>
+                            )
+                        }
+                        )
+                    }
                 </ul>
             </div>
         </nav>

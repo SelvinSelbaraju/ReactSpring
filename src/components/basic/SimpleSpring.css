@@ -1,0 +1,16 @@
+.bounce-particle {
+  margin-top: 100px;
+  position: relative;
+  background-color: red;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.config-params {
+  display: flex;
+  flex-direction: column;
+}

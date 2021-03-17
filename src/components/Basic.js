@@ -1,22 +1,22 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch } from 'react-router-dom'
-import FlipPage from './basic/FlipPage';
-import SimpleSpring from './basic/SimpleSpring';
+import { navbarItems } from './NavbarItems';
 
 
 function Basic() {
     let { path } = useRouteMatch();
-    console.log(path);
     return (
         <>
         <h1>Basic</h1>
         <Switch>
-            <Route path={`${path}/simplespring`}>
-                <SimpleSpring />
-            </Route>
-            <Route path={`${path}/flip-page`}>
-                <FlipPage />
-            </Route>
+            {
+                navbarItems[0].branch.map(item => {
+                    const { path, component } = item;
+                    return (
+                        <Route path={path} component={component} />
+                    )
+                })
+            }
             <Route exact path={path} />
         </Switch>
         <div>

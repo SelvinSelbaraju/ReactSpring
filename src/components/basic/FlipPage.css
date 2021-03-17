@@ -1,0 +1,20 @@
+.flip-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.flipper {
+  position: absolute;
+  background-size: cover;
+  width: 33vw;
+  height: 33vw;
+}
+
+.one {
+  background-image: url('https://images.unsplash.com/photo-1530878955558-a6c31b9c97db?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bmljZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');
+}
+
+.two {
+  background-image: url('https://sherowallpapers.files.wordpress.com/2012/01/black-ladybird-high-quality-free-wallpapers.jpg');
+}

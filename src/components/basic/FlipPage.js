@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSpring, animated} from 'react-spring';
+import './FlipPage.css';
 
 function FlipPage() {
     const [flipped, setFlipped] = useState(false);
