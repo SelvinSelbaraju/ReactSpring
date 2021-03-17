@@ -9,7 +9,7 @@ function SimpleSpring() {
     const [tension, setTension] = useState(defaultValues.tension)
     const props = useSpring({reset: !run, config: {friction: friction, mass: mass, tension: tension}, transform: run ? 'translate(0%, 50%)' : 'translate(0%, 0%', from: {transform: 'translate(0%, 0%)'}});
     return (
-        <div className="container">
+        <div className="example-container">
                 <p>A simple bouncing particle</p>
                 <button onClick={() => setRun(!run)} className="btn btn-primary" type="button">{run ? 'Reset' : 'Start'}</button>
                 <div className="config-params">

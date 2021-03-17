@@ -21,6 +21,7 @@ function Navbar() {
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <NavLink className="dropdown-item" to="/basic/simplespring">Simple Spring</NavLink>
+                                <NavLink className="dropdown-item" to="/basic/flip-page">Flip Page</NavLink>
                             </div>
                     </li>
                     <NavLink to="/advanced" className="nav-link nav-item">
